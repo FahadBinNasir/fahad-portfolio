@@ -71,7 +71,29 @@ p a:hover { border-bottom-color: var(--accent); }
 .mobile-menu { display: none; }
 
 /* ── Hero ── */
-.hero { padding: 200px 0 130px; }
+.hero { padding: 200px 0 130px; position: relative; overflow: hidden; }
+/* Signature visual: faint grid + slow-drifting mint glow. CSS-only, zero assets. */
+.hero-visual { position: absolute; inset: 0; pointer-events: none; }
+.hero .wrap { position: relative; }
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 28%, black 15%, transparent 72%);
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 28%, black 15%, transparent 72%);
+}
+.hero-glow {
+  position: absolute; width: 720px; height: 720px; left: 52%; top: -280px;
+  background: radial-gradient(circle, rgba(0, 229, 160, 0.10) 0%, transparent 65%);
+  animation: glowDrift 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes glowDrift {
+  from { transform: translate3d(-12%, 6%, 0) scale(1); }
+  to { transform: translate3d(10%, -4%, 0) scale(1.12); }
+}
 .eyebrow {
   font-size: 15px; color: var(--accent); font-weight: 500;
   letter-spacing: 0.06em; margin-bottom: 18px;
@@ -243,6 +265,7 @@ a.contact-row:hover .contact-value { color: var(--accent); }
 }
 @media (prefers-reduced-motion: reduce) {
   .fade-in, .fade-up { opacity: 1; animation: none; }
+  .hero-glow { animation: none; }
   html { scroll-behavior: auto; }
 }
 

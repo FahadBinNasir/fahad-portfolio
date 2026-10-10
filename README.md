@@ -5,7 +5,7 @@ Full rebuild of fahadbinnasir.tech as a single-page portfolio.
 ## What's new
 
 - **One-pager** (was 3 pages): Hero → About → Featured Projects → More Projects → Skills → Contact
-- **Hero** now has a real positioning statement ("I build AI-powered applications, backends, and intelligent automation") instead of a keyword list
+- **Hero** now has a real positioning statement ("I build AI-powered applications, backends, and intelligent automation") plus a subtle CSS-only signature visual (faint grid + slow-drifting mint glow — no images, no heavy animation)
 - **3 featured projects** (ApplyAI, AuthentiQ, Unified Knowledge Brain) written as Problem → Approach → Result — the format recruiters respond to
 - **9 more projects** in a compact list; every project links to its live site/GitHub where one exists
 - **Skills** use hand-drawn SVG icons (no emojis), grouped honestly, no proficiency bars
@@ -17,13 +17,37 @@ Full rebuild of fahadbinnasir.tech as a single-page portfolio.
 
 In Git Bash, inside your `fahad-portfolio` folder:
 
+**1. Check what's there first** — never skip this:
+
 ```
-git checkout -b redesign
-git rm -r .
-git clean -fd
+git status
 ```
 
-Then extract this zip's contents into the folder and:
+If you see files you created yourself (like a `.patch` file) listed as untracked,
+move them somewhere safe before continuing. Do NOT run `git clean -fd` —
+it permanently deletes untracked files.
+
+**2. Start a fresh branch:**
+
+```
+git checkout -b redesign
+```
+
+**3. Extract this zip's contents into the folder**, letting it overwrite
+`index.html`, `css/style.css`, `sitemap.xml`, etc.
+
+**4. Remove the old pages you no longer need** (they now redirect to sections
+of the one-pager):
+
+```
+git rm projects.html contact.html
+```
+
+Then check `git status` again — if old folders from the previous design
+(e.g. images or css files the new design doesn't use) still show as tracked,
+remove those too with `git rm -r <folder>`.
+
+**5. Commit and push:**
 
 ```
 git add -A
