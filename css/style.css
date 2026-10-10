@@ -594,6 +594,84 @@ footer .mono {
   font-family: var(--font-mono);
 }
 
+/* ── ABOUT STRIP ── */
+.about-strip {
+  padding: 5rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+}
+
+.about-card h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.about-card > div > p {
+  color: var(--text-dim);
+  line-height: 1.75;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.about-card > div > p:last-child { margin-bottom: 0; }
+
+.about-card a { color: var(--accent); text-decoration: none; }
+.about-card a:hover { text-decoration: underline; }
+
+.about-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  justify-content: center;
+  border-left: 1px solid var(--border);
+  padding-left: 2rem;
+}
+
+.fact-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dimmer);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.2rem;
+}
+
+.fact-val {
+  font-size: 0.92rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.fact-val .open { color: var(--accent); }
+
+/* ── PROJECT LINKS ── */
+.proj-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.proj-links a {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.proj-links a:hover { text-decoration: underline; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
@@ -607,6 +685,9 @@ footer .mono {
   .contact-section,
   .edu-strip { padding-left: 1.5rem; padding-right: 1.5rem; }
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-card { grid-template-columns: 1fr; gap: 2rem; }
+  .about-facts { border-left: none; padding-left: 0; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+  .about-strip { padding-left: 1.5rem; padding-right: 1.5rem; }
   .projects-grid { grid-template-columns: 1fr; }
   .featured-card { padding: 1.5rem; }
 }
