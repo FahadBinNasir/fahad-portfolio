@@ -47,115 +47,320 @@
   </script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- NAV -->
-  <nav>
-    <div class="nav-logo">FBN<span class="dot">.</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-tag mono">&lt;SE @ BU&gt;</div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-content">
-      <p class="hero-greeting mono fade-in delay-1">// hello, world</p>
-      <h1 class="hero-name fade-in delay-2">
-        Fahad<br><span class="outline-text">Bin Nasir</span>
-      </h1>
-      <p class="hero-tagline fade-in delay-3">
-        Software Engineer · AI/ML · Full-Stack · Automation
-      </p>
-      <div class="hero-cta fade-in delay-4">
-        <a href="projects.html" class="btn-primary">View Projects</a>
-        <a href="contact.html" class="btn-ghost">Get in Touch</a>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#top" aria-label="Home">FBN<span class="accent">.</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <a class="icon-link" href="https://github.com/FahadBinNasir" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.26 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-    <div class="hero-scroll-hint mono fade-in delay-5">scroll ↓</div>
-  </section>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/FahadBinNasir" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
 
-  <!-- ABOUT -->
-  <section class="about-strip">
-    <div class="about-card fade-up">
-      <div>
-        <p class="section-label mono">// about</p>
-        <h2>Engineer who ships.</h2>
-        <p>Final-year Software Engineering student at Bahria University, Karachi. I build AI-powered applications, backends, and automation — from a governed RAG knowledge platform (my FYP) and a secure interview workspace, to mobile apps and IoT systems.</p>
-        <p>Currently building <a href="https://applyai.fahadbinnasir.tech" target="_blank">ApplyAI</a>, an AI career copilot that scores job listings against your real profile and drafts honest applications. Open to internships and junior roles.</p>
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow fade-in">Hello, I'm</p>
+        <h1 class="hero-name fade-in delay-1">Fahad Bin Nasir<span class="accent">.</span></h1>
+        <p class="hero-tagline fade-in delay-2">I build AI-powered applications, backends, and intelligent automation.</p>
+        <p class="hero-lede fade-in delay-3">Final-year Software Engineering student at Bahria University, Karachi. Currently building <a href="https://applyai.fahadbinnasir.tech" target="_blank" rel="noopener">ApplyAI</a> — an AI career copilot — and a governed RAG knowledge platform for my final-year project. Open to internships and junior roles where I can ship real work.</p>
+        <div class="hero-cta fade-in delay-4">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
       </div>
-      <div class="about-facts">
-        <div><span class="fact-label">// LOCATION</span><span class="fact-val">Karachi, Pakistan</span></div>
-        <div><span class="fact-label">// EDUCATION</span><span class="fact-val">BS Software Engineering, Bahria University</span></div>
-        <div><span class="fact-label">// FOCUS</span><span class="fact-val">AI/ML · Backend · Automation</span></div>
-        <div><span class="fact-label">// STATUS</span><span class="fact-val"><span class="open">●</span> Open to internships</span></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <p class="section-label fade-up"><span class="accent">01</span> · About</p>
+        <div class="about-grid">
+          <div class="fade-up">
+            <h2 class="section-title">Engineer who ships.</h2>
+            <div class="prose">
+              <p>I build AI-powered applications, backends, and automation — from a governed RAG knowledge platform and a secure interview workspace, to mobile apps and IoT systems. I care about software that works in the real world: honest scope, clean architecture, and finishing what I start.</p>
+              <p>Right now I'm deep in my final year at Bahria University, building <a href="https://applyai.fahadbinnasir.tech" target="_blank" rel="noopener">ApplyAI</a> and my final-year project in parallel — and looking for an internship or junior role where I can contribute from day one.</p>
+            </div>
+          </div>
+          <dl class="facts fade-up delay-1">
+            <div><dt>Location</dt><dd>Karachi, Pakistan</dd></div>
+            <div><dt>Education</dt><dd>BS Software Engineering, Bahria University</dd></div>
+            <div><dt>Focus</dt><dd>AI/ML · Backend · Automation</dd></div>
+            <div><dt>Status</dt><dd><span class="status-dot" aria-hidden="true"></span>Open to internships</dd></div>
+          </dl>
+        </div>
+
+        <div class="timeline fade-up">
+          <div class="timeline-item">
+            <span class="timeline-year">2022 — Present</span>
+            <div>
+              <h3>BSE Software Engineering</h3>
+              <p>Bahria University, Karachi · 7th semester · Final year</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2016 — 2022</span>
+            <div>
+              <h3>Matric &amp; FSc (Pre-Engineering)</h3>
+              <p>Karachi, Pakistan</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <p class="section-label fade-up"><span class="accent">02</span> · Featured projects</p>
+        <h2 class="section-title fade-up">Things I've built.</h2>
+
+        <article class="project fade-up">
+          <div class="project-meta">
+            <p class="project-kicker">Independent product · 2026 · <span class="accent">In progress</span></p>
+            <h3>ApplyAI <span class="project-sub">— AI Career Copilot</span></h3>
+          </div>
+          <div class="project-body">
+            <div class="par">
+              <h4>Problem</h4>
+              <p>Tailoring every job application by hand is slow — and most "auto-apply" tools invent qualifications you don't have.</p>
+            </div>
+            <div class="par">
+              <h4>Approach</h4>
+              <p>A self-hosted pipeline on n8n + Docker: it scores job posts against a verified career profile, drafts tailored CVs and cover letters using only real qualifications, screens for scam signals — and never submits without human approval.</p>
+            </div>
+            <div class="par">
+              <h4>Result</h4>
+              <p>Live in production at applyai.fahadbinnasir.tech; Claude for Startups application submitted.</p>
+            </div>
+          </div>
+          <ul class="tags" aria-label="Technologies">
+            <li>n8n</li><li>Docker</li><li>Claude API</li><li>Oracle Cloud</li><li>Python</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://applyai.fahadbinnasir.tech" target="_blank" rel="noopener">Live site ↗</a>
+            <a href="https://github.com/FahadBinNasir/applyai" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project fade-up">
+          <div class="project-meta">
+            <p class="project-kicker">Independent product · 2026</p>
+            <h3>AuthentiQ <span class="project-sub">— Secure Interview Workspace</span></h3>
+          </div>
+          <div class="project-body">
+            <div class="par">
+              <h4>Problem</h4>
+              <p>Remote interviews are easy to fake — and hard to audit afterward.</p>
+            </div>
+            <div class="par">
+              <h4>Approach</h4>
+              <p>Next.js 15 + FastAPI with OTP email auth and role-based access, WebRTC live interview rooms, and integrity-event capture that compiles timestamped evidence reports with CSV export. Human-review-first throughout.</p>
+            </div>
+            <div class="par">
+              <h4>Result</h4>
+              <p>Working end-to-end prototype: real-time rooms, evidence timelines, exportable reports.</p>
+            </div>
+          </div>
+          <ul class="tags" aria-label="Technologies">
+            <li>Next.js 15</li><li>FastAPI</li><li>WebRTC</li><li>Cloudflare Workers</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/FahadBinNasir/AuthentiQ" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project fade-up">
+          <div class="project-meta">
+            <p class="project-kicker">Final Year Project · 2026 · <span class="accent">In progress</span></p>
+            <h3>Unified Knowledge Brain <span class="project-sub">— Governed RAG Platform</span></h3>
+          </div>
+          <div class="project-body">
+            <div class="par">
+              <h4>Problem</h4>
+              <p>Team knowledge lives scattered across GitHub, Gmail, Drive, and Slack — unsearchable and ungoverned.</p>
+            </div>
+            <div class="par">
+              <h4>Approach</h4>
+              <p>Multi-tenant platform (FastAPI + Next.js, PostgreSQL/pgvector, Redis) ingesting six sources via OAuth and webhooks, with PII redaction, five-tier RBAC, encrypted credential storage, and GDPR-compliant deletion.</p>
+            </div>
+            <div class="par">
+              <h4>Result</h4>
+              <p>In active development as my Final Year Project I.</p>
+            </div>
+          </div>
+          <ul class="tags" aria-label="Technologies">
+            <li>FastAPI</li><li>Next.js</li><li>PostgreSQL</li><li>pgvector</li><li>Redis</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/FahadBinNasir/knowledge-brain-fyp" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MORE PROJECTS -->
+    <section class="section" id="more">
+      <div class="wrap">
+        <p class="section-label fade-up"><span class="accent">03</span> · More projects</p>
+        <h2 class="section-title fade-up">Also built.</h2>
+        <ul class="more-list">
+          <li class="fade-up">
+            <div><h3>AI Exam Cheating Detector</h3><p>Real-time proctoring with OpenCV + MediaPipe gaze tracking and ML keystroke-anomaly scoring.</p></div>
+            <span class="more-tags">Python · OpenCV · MediaPipe</span>
+          </li>
+          <li class="fade-up">
+            <div><h3>ChurnVision Pro</h3><p>Telco churn prediction — Random Forest + ANN on 7,043 records with SMOTE, compared in a Streamlit dashboard.</p></div>
+            <span class="more-tags">Keras · Scikit-learn · Streamlit</span>
+          </li>
+          <li class="fade-up">
+            <div><h3>Flutter App Suite</h3><p>Five production-style apps: weather, e-commerce, expense tracker, food delivery, and DesiFit fitness with AI meal plans.</p></div>
+            <span class="more-tags">Flutter · Dart · Firebase</span>
+          </li>
+          <li class="fade-up">
+            <div><h3>Smart Inventory Management</h3><p>RFID inventory tracker on ESP8266 with HTTPS telemetry and LCD feedback.</p></div>
+            <span class="more-tags">NodeMCU · C++ · RFID</span>
+          </li>
+          <li class="fade-up">
+            <div><h3>YouTube Playlist Downloader</h3><p>Desktop utility wrapping yt-dlp + FFmpeg: playlists, MP3 extraction, subtitles. <a href="https://github.com/FahadBinNasir/youtube-playlist-downloader" target="_blank" rel="noopener">GitHub ↗</a></p></div>
+            <span class="more-tags">C# · WinForms</span>
+          </li>
+          <li class="fade-up">
+            <div><h3>FPS Multiplayer Game</h3><p>Playable real-time multiplayer first-person shooter in Unity. <a href="https://github.com/FahadBinNasir/fps-game-mp" target="_blank" rel="noopener">GitHub ↗</a></p></div>
+            <span class="more-tags">Unity · C#</span>
+          </li>
+          <li class="fade-up">
+            <div><h3>Airline Reservation System</h3><p>Booking and cancellation with client/admin panels on SQL-backed storage. <a href="https://github.com/FahadBinNasir/AirlineReservationSystemC-" target="_blank" rel="noopener">GitHub ↗</a></p></div>
+            <span class="more-tags">C# · SQL · WinForms</span>
+          </li>
+          <li class="fade-up">
+            <div><h3>Metro Bus Navigation</h3><p>Dijkstra-based public-transport route planner with GUI visualization.</p></div>
+            <span class="more-tags">C# · Algorithms</span>
+          </li>
+          <li class="fade-up">
+            <div><h3>College Network Design</h3><p>Six-department hierarchical LAN with VLANs and RIP v2, built in Packet Tracer.</p></div>
+            <span class="more-tags">Cisco · Networking</span>
+          </li>
+        </ul>
+        <p class="more-cta fade-up">Everything lives on <a href="https://github.com/FahadBinNasir" target="_blank" rel="noopener">GitHub ↗</a></p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <p class="section-label fade-up"><span class="accent">04</span> · Skills</p>
+        <h2 class="section-title fade-up">What I work with.</h2>
+        <div class="skills-grid">
+          <div class="skill fade-up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/></svg>
+            <h3>AI / ML</h3>
+            <p>TensorFlow · Keras · Scikit-learn · OpenCV · MediaPipe · Pandas · NumPy · RAG pipelines · LLM APIs</p>
+          </div>
+          <div class="skill fade-up delay-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><circle cx="7" cy="7.5" r="1" fill="currentColor" stroke="none"/><circle cx="7" cy="16.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <h3>Backend &amp; Cloud</h3>
+            <p>FastAPI · Next.js · Node.js · PostgreSQL · Docker · n8n · Oracle Cloud · Vercel</p>
+          </div>
+          <div class="skill fade-up delay-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><line x1="10.5" y11="18.5" x2="13.5" y2="18.5"/></svg>
+            <h3>Mobile &amp; Desktop</h3>
+            <p>Flutter · Dart · Firebase · Unity · Windows Forms</p>
+          </div>
+          <div class="skill fade-up delay-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg>
+            <h3>Languages</h3>
+            <p>Python · TypeScript · JavaScript · C# · C++ · Dart · Java</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap contact-wrap">
+        <p class="section-label fade-up"><span class="accent">05</span> · Contact</p>
+        <h2 class="section-title fade-up">Get in touch.</h2>
+        <p class="prose fade-up">I'm currently looking for <strong>internship and junior opportunities</strong> — if you're hiring, collaborating, or just want to talk shop, my inbox is open. I read everything and reply within a day.</p>
+        <div class="contact-grid">
+          <div class="contact-links fade-up">
+            <a class="contact-row" href="mailto:fahad@fahadbinnasir.tech">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">fahad@fahadbinnasir.tech</span>
+            </a>
+            <a class="contact-row" href="https://github.com/FahadBinNasir" target="_blank" rel="noopener">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/FahadBinNasir</span>
+            </a>
+            <a class="contact-row" href="tel:+923278262810">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">+92 327 8262810</span>
+            </a>
+            <div class="contact-row static">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Karachi, Pakistan</span>
+            </div>
+          </div>
+          <form class="contact-form fade-up delay-1" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Internship opportunity">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <p class="form-note" id="formMsg" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>Designed &amp; built by Fahad Bin Nasir</p>
+      <p>© <span id="year">2026</span> · <a href="#top">Back to top ↑</a></p>
     </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="skills-section">
-    <p class="section-label mono">// technical skills</p>
-    <h2 class="section-title">What I Build With</h2>
-    <div class="skills-grid">
-      <div class="skill-card fade-up">
-        <div class="skill-icon">🧠</div>
-        <h3>AI / ML</h3>
-        <p>TensorFlow, Keras, Scikit-learn, OpenCV, MediaPipe, Pandas, NumPy, RAG pipelines, LLM APIs</p>
-      </div>
-      <div class="skill-card fade-up delay-1">
-        <div class="skill-icon">⚙️</div>
-        <h3>Backend &amp; Cloud</h3>
-        <p>FastAPI, Next.js, Node.js, PostgreSQL, Docker, n8n, Oracle Cloud, Vercel, Cloudflare Workers</p>
-      </div>
-      <div class="skill-card fade-up delay-2">
-        <div class="skill-icon">📱</div>
-        <h3>Mobile &amp; Apps</h3>
-        <p>Flutter, Dart, Firebase, Unity, Streamlit, Windows Forms, Tkinter</p>
-      </div>
-      <div class="skill-card fade-up delay-3">
-        <div class="skill-icon">⌨️</div>
-        <h3>Languages</h3>
-        <p>Python, TypeScript, JavaScript, C#, C++, Dart, Java, HTML/CSS</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED PROJECT -->
-  <section class="featured-section">
-    <p class="section-label mono">// currently building</p>
-    <div class="featured-card">
-      <div class="featured-badge">IN PROGRESS · 2026</div>
-      <h2 class="featured-title">ApplyAI</h2>
-      <p class="featured-sub">AI Career Copilot</p>
-      <p class="featured-desc">
-        Forward any job post and ApplyAI scores it against your verified career profile, drafts a tailored CV and cover letter using only your real qualifications, screens for scam signals — and never applies without your approval. Self-hosted on n8n + Docker.
-      </p>
-      <div class="featured-tags">
-        <span class="tag">n8n</span>
-        <span class="tag">Docker</span>
-        <span class="tag">Oracle Cloud</span>
-        <span class="tag">Claude API</span>
-        <span class="tag">Python</span>
-      </div>
-      <div class="hero-cta">
-        <a href="https://applyai.fahadbinnasir.tech" target="_blank" class="btn-primary">Live Site →</a>
-        <a href="projects.html" class="btn-ghost">See All Projects</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p class="mono">fahad@fahadbinnasir.tech · github.com/FahadBinNasir</p>
-    <p class="footer-copy">© 2026 Fahad Bin Nasir</p>
   </footer>
 
   <script src="js/main.js"></script>

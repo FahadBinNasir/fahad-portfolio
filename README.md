@@ -1,50 +1,39 @@
-# Fahad Bin Nasir — Portfolio
+# Portfolio Redesign — Minimal Dark Editorial
 
-Personal portfolio site for **Fahad Bin Nasir**, final-year Software Engineering student at Bahria University, Karachi.
+Full rebuild of fahadbinnasir.tech as a single-page portfolio.
 
-**Live:** https://fahadbinnasir.tech  
-**Repo:** https://github.com/FahadBinNasir/fahad-portfolio
+## What's new
 
-## What it is
+- **One-pager** (was 3 pages): Hero → About → Featured Projects → More Projects → Skills → Contact
+- **Hero** now has a real positioning statement ("I build AI-powered applications, backends, and intelligent automation") instead of a keyword list
+- **3 featured projects** (ApplyAI, AuthentiQ, Unified Knowledge Brain) written as Problem → Approach → Result — the format recruiters respond to
+- **9 more projects** in a compact list; every project links to its live site/GitHub where one exists
+- **Skills** use hand-drawn SVG icons (no emojis), grouped honestly, no proficiency bars
+- **About** adds an education timeline; contact keeps the working FormSubmit form
+- **SEO preserved**: canonical, Open Graph/Twitter cards, JSON-LD Person+Website schemas, robots.txt (incl. AI crawlers), sitemap.xml
+- **Old URLs redirect**: `/projects.html` → `/#projects`, `/contact.html` → `/#contact` (via `vercel.json`, permanent 301s)
 
-A static three-page portfolio (Home, Projects, Contact) with a dark terminal-meets-editorial aesthetic — Syne display type paired with DM Mono accents, scroll-triggered animations, and a working contact form.
+## Deploy (review first, then go live)
 
-## Tech
-
-- Plain HTML / CSS / JavaScript — no build step, no framework
-- Google Fonts: Syne + DM Mono
-- Contact form delivers via [FormSubmit](https://formsubmit.co) (AJAX) to fahad@fahadbinnasir.tech
-- Hosted on [Vercel](https://vercel.com), domain via GitHub Student Developer Pack (.tech)
-
-## Structure
+In Git Bash, inside your `fahad-portfolio` folder:
 
 ```
-├── index.html        # Home — hero, about, skills, featured project
-├── projects.html     # Project grid (12 projects)
-├── contact.html      # Contact links, working form, education
-├── css/style.css     # All styles
-├── js/main.js        # Scroll animations, nav, form submit
-└── favicon.svg       # Site icon
+git checkout -b redesign
+git rm -r .
+git clean -fd
 ```
 
-## Run locally
+Then extract this zip's contents into the folder and:
 
-No build needed — open `index.html` in a browser, or serve the folder:
-
-```bash
-npx serve .
-# or
-python3 -m http.server 8000
+```
+git add -A
+git commit -m "Full redesign: minimal dark editorial one-pager"
+git push -u origin redesign
 ```
 
-## Deployment
+Vercel will build a **preview deployment** with its own URL — review it there first.
+If it looks right, merge the `redesign` branch into `main` on GitHub (Pull Request →
+Merge). Vercel then deploys it to fahadbinnasir.tech automatically.
 
-Pushes to `main` auto-deploy on Vercel. Custom domain `fahadbinnasir.tech` is configured in the Vercel project dashboard (DNS: `A @ → 76.76.21.21`, `CNAME www → cname.vercel-dns.com`).
-
-> Note: the contact form's first-ever submission triggers a FormSubmit activation email — confirm it once so messages start delivering.
-
-## Contact
-
-- Email: fahad@fahadbinnasir.tech
-- GitHub: https://github.com/FahadBinNasir
-- Location: Karachi, Pakistan
+After going live, resubmit the sitemap in Search Console once
+(`https://fahadbinnasir.tech/sitemap.xml`) since it changed from 3 URLs to 1.
